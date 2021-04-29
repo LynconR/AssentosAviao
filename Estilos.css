@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face{
+	font-family:fontegeral;
+	src:url(FjallaOne-Regular.ttf);
+}
+body{
+	color:#000;	
+}
+*{
+	font-family:fontegeral;
+}
+
+.fundo{
+	background-image:url(imagens/Fundo2.jpg);
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-size:cover;
+		
+}
+
+.central{
+	width:621px;
+	height:980px;
+	background-color:rgba(150,150,204,0.3);
+	margin: 0 auto;
+}
+
+.central div{
+	margin:20px 0 0 20px;
+	height:100px;
+	width:100px;
+	background-color:rgba(255,102,0,0.3);
+	float:left;
+	text-align:center;
+	line-height:20px;
+	font-size: 16px;
+	transition:0.8s;
+	border-radius:20px;
+}
+
+.ocupado{
+	color:red;
+	
+	
+}
+
+.central div:hover{
+	transition:0.4s;
+	color:white;
+	background-color:rgba(0,0,0,0.9);
+}
+
+.form{
+	margin:0 auto;
+	width:621px;
+	background-color:rgba(150,150,204,0.3);
+	text-align:center;
+}
+
+.legenda{
+  	width:621px;
+	height:40px;
+	background-color:rgba(150,150,204,0.3);
+	margin: 0 auto;
+	line-height:50px
+}
+
+.legenda div{
+	float:left;
+	height:40px;
+	width:100px;
+	margin:0 120px 0 20px ;
+	text-align:center;
+}

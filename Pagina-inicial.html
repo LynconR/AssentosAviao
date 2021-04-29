@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<link href="Estilos.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>Assentos-Avião</title>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+var nome;
+$(document).ready(function(e){
+  $('.central div').click(function(e){ 
+	  sit=$(this).attr('class');
+		if(sit != 'ocupado'){ 
+       		resp =confirm("Confirma reservar assento?");
+	   		if(resp==true){
+				atual=$(this).html();
+				nome = prompt("Digite o seu nome");
+				$(this).addClass('ocupado');
+				$(this).html(atual+"<br>Ocupado Por<br><br>"+nome);
+				
+			}
+		}
+		else{
+			remo=confirm("Confirma remoção de assento");
+			if(remo==true){
+				$(this).removeClass('ocupado');
+				$(this).html(atual);
+			}
+		}
+});
+});
+</script>
+</head>
+	
+<body class="fundo">
+	<div class="form">
+    	<label for="Nome"> Nome>>>>>>>>>>>>>></label>
+        <input type="text">
+        <br>
+		<label for="idade">Idade>>>>>>>>>>>>>></label>
+   		<input type="number">
+        <br>
+        <label for="Destino">Destino>>>>>>>>>>>></label>
+        <input type="text">
+        <br>
+        <label for="sexo">Sexo:</label>
+		<input type="radio" name="genero" id="1">
+        <label for="sexo">Masculino</label>
+        <input type="radio" name="genero" id="2">
+        <label for="sexo">Feminino</label>
+        <br>
+		<label for="Classe"> Classe: </label>
+        <input type="radio" name="classe" id="a">
+        <label for="classe">Econômica</label>
+        <input type="radio" name="classe" id="b">
+        <label for="classe">Premium</label>
+        <input type="radio" name="classe" id="c">
+        <label for="classe">Elite</label>
+        <br>
+        <label for="Datasaida">Data de saída>>>>>>></label>
+        <input type="date" name="datas">
+        <br>
+        <label for"Dataretorno">Data de retorno>>>></label>
+        <input type="date" name="datas">  
+    </div>
+    <div class="legenda">
+    	<div> 
+        Janelas
+        </div>
+        <div>
+        Corredor 
+        </div>
+    </div>
+	<div class="central">
+    	
+		<script>
+			for(x = 1; x<=40; x++){
+				assunto = "A"+x;
+				document.write("<div id="+assunto+">"+assunto+"</div>");
+										
+			}
+		</script>
+        	
+    </div>
+</body>
+</html>
